@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robotic Gripper — ME Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">ME<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="project-detail-hero">
+    <div class="container">
+      <a href="projects.html" class="back-link">← All Projects</a>
+      <div class="project-tags" style="margin-bottom: 1.25rem;">
+        <span class="tag">Mechanisms</span>
+        <span class="tag">Robotics</span>
+        <span class="tag">Compliant Design</span>
+        <span class="tag">3D Printing</span>
+      </div>
+      <h1>6-DOF Robotic<br>Gripper</h1>
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <span class="project-meta-label">Year</span>
+          <span class="project-meta-value">2023</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Role</span>
+          <span class="project-meta-value">Mechanisms Designer</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Duration</span>
+          <span class="project-meta-value">5 months</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Industry</span>
+          <span class="project-meta-value">Industrial Automation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="project-cover" style="background: linear-gradient(135deg, #0d1117 0%, #1c2333 50%, #0a192f 100%);">
+      <div class="project-placeholder-art art-3" style="position:absolute; inset:0; transform: scale(3);"></div>
+    </div>
+  </div>
+
+  <section class="container">
+    <div class="project-body">
+
+      <aside class="project-sidebar">
+        <div class="sidebar-section">
+          <h4>Tools Used</h4>
+          <ul>
+            <li>SolidWorks (mechanisms)</li>
+            <li>ANSYS Mechanical</li>
+            <li>MATLAB / Simulink</li>
+            <li>Python (control)</li>
+            <li>SLA / FDM Printing</li>
+          </ul>
+        </div>
+        <div class="sidebar-section">
+          <h4>Design Methods</h4>
+          <ul>
+            <li>Compliant Mechanism Theory</li>
+            <li>Pseudo-Rigid-Body Model</li>
+            <li>Kinematic Synthesis</li>
+            <li>DFM for Additive Mfg.</li>
+          </ul>
+        </div>
+        <div class="sidebar-section">
+          <h4>Materials</h4>
+          <ul>
+            <li>PA12 (SLS Nylon)</li>
+            <li>TPU 95A (flex joints)</li>
+            <li>Titanium (fasteners)</li>
+          </ul>
+        </div>
+      </aside>
+
+      <article class="project-content">
+        <h2>Overview</h2>
+        <p>Automated assembly lines handling fragile electronics or soft goods require grippers that can adapt to irregular geometries and self-limit applied force — without requiring force sensors or complex closed-loop control. This project developed a 3-finger, 6-degree-of-freedom compliant gripper designed around passive mechanical intelligence.</p>
+        <p>The key design challenge: grip objects ranging from 20 mm to 120 mm in diameter with contact forces never exceeding 3 N, using only a single linear actuator input — no active sensing.</p>
+
+        <h2>Approach</h2>
+        <p>I used pseudo-rigid-body modeling (PRBM) to synthesize the compliant mechanism geometry. Each finger consists of a bistable, monolithic flexure printed in PA12 nylon, with a TPU 95A insert at each joint to tune stiffness independently. The three-finger assembly uses a differential pulley mechanism on the actuation cable so force distributes passively across all fingers regardless of object geometry.</p>
+        <p>Kinematic synthesis set the finger profiles so the gripper self-centers on circular and rectangular objects automatically. ANSYS large-deformation FEA validated the flexure fatigue life — the design target was 500,000 cycles minimum.</p>
+        <p>A rapid prototyping loop with 8 physical iterations refined the joint stiffness profile, which proved sensitive to print orientation. Final parts were SLS-printed in a single build for each finger, eliminating all assembly at the joint level.</p>
+
+        <div class="result-grid">
+          <div class="result-item">
+            <span class="num">&lt;3N</span>
+            <span class="label">Max Contact Force</span>
+          </div>
+          <div class="result-item">
+            <span class="num">500k+</span>
+            <span class="label">Cycle Fatigue Life</span>
+          </div>
+          <div class="result-item">
+            <span class="num">20–120</span>
+            <span class="label">mm Grip Range</span>
+          </div>
+        </div>
+
+        <h2>Outcome</h2>
+        <p>The prototype achieved all performance targets in bench testing: grip force consistently under 3 N across the full size range, passive self-centering within 2 mm for symmetric objects, and zero grip failures across 500,000 cycles in accelerated life testing. The monolithic finger design reduced part count by 74% compared to a comparable rigid-link gripper with equivalent DOF.</p>
+        <p>The gripper was integrated into a production pilot line where it replaced a pneumatic suction system that had 12% cycle failures on irregular package geometries. Failure rate dropped to under 0.4%.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="container" style="border-top: 1px solid var(--border); padding: 3rem 0 6rem; display: flex; justify-content: space-between; align-items: center;">
+    <a href="project-2.html" class="btn-ghost">← Previous Project</a>
+    <a href="projects.html" class="btn-ghost">All Projects →</a>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="nav-logo">ME<span class="accent">.</span></span>
+      <p>© 2026 — Mechanical Engineering Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

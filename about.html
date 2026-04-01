@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — ME Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">ME<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="container">
+    <div class="about-grid">
+
+      <div class="about-sticky">
+        <div class="about-avatar">
+          <span class="avatar-placeholder">YN</span>
+        </div>
+        <p class="about-name">Your Name</p>
+        <p class="about-role">Mechanical Engineer</p>
+
+        <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+          <a href="mailto:your@email.com" class="contact-social" style="font-size: 0.82rem;">your@email.com</a>
+          <a href="https://linkedin.com" target="_blank" class="contact-social" style="font-size: 0.82rem;">LinkedIn ↗</a>
+          <a href="https://github.com" target="_blank" class="contact-social" style="font-size: 0.82rem;">GitHub ↗</a>
+          <a href="assets/resume.pdf" target="_blank" class="btn-primary" style="margin-top: 0.5rem; width: fit-content;">Download Résumé</a>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-tag">About Me</span>
+        <h2>Engineer. Problem solver. Builder.</h2>
+
+        <p>I'm a mechanical engineer with 5 years of experience spanning structural analysis, thermal systems, and mechanism design. I care deeply about the intersection of rigorous engineering analysis and products that actually get built — which means I've spent as much time on factory floors and in machine shops as I have at a computer.</p>
+        <p>My work tends to involve systems where physics get complicated: high load-to-weight structures, thermally-constrained hardware, or mechanisms that need to do something clever without extra components. I like problems that require you to understand the fundamentals before you can trust the simulation.</p>
+        <p>Before my current role I spent two years at a small aerospace supplier, which taught me how to deliver under real certification pressure. Before that, I did a research stint in a university robotics lab that gave me a deep appreciation for compliant mechanism design — a toolset I've kept using in industry ever since.</p>
+
+        <div class="timeline">
+          <h3 style="font-family: var(--font-display); font-size: 1.6rem; letter-spacing: 0.04em; margin-bottom: 1rem;">Experience</h3>
+
+          <div class="timeline-item">
+            <span class="timeline-year">2022 — Now</span>
+            <div class="timeline-body">
+              <h4>Senior Mechanical Engineer — Acme Dynamics</h4>
+              <p>Structural and thermal design for next-gen light EV platforms. Leading a team of 3 engineers on chassis and suspension systems.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-year">2020 — 2022</span>
+            <div class="timeline-body">
+              <h4>Mechanical Engineer — Skyward Systems (Aerospace)</h4>
+              <p>Thermal and mechanical design of APU subsystems. Certified hardware through DO-160G environmental qualification testing.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-year">2019 — 2020</span>
+            <div class="timeline-body">
+              <h4>Research Engineer — University Robotics Lab</h4>
+              <p>Compliant mechanism synthesis and soft gripper development. Co-authored 2 conference papers on PRBM modeling methods.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-year">2015 — 2019</span>
+            <div class="timeline-body">
+              <h4>B.S. Mechanical Engineering — State University</h4>
+              <p>GPA 3.8 / 4.0. Capstone: Topology-optimized bicycle frame. Minor in Applied Mathematics.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 3.5rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.6rem; letter-spacing: 0.04em; margin-bottom: 1.5rem;">Skills</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+            <div style="padding: 1rem; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              <p style="font-size: 0.72rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.5rem;">CAD / Simulation</p>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">SolidWorks, ANSYS, CATIA, Altair OptiStruct, ANSYS Fluent, MATLAB</p>
+            </div>
+            <div style="padding: 1rem; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              <p style="font-size: 0.72rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.5rem;">Manufacturing</p>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">CNC Machining, TIG/MIG welding, SLA/SLS/FDM printing, Sheet metal, Composites layup</p>
+            </div>
+            <div style="padding: 1rem; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              <p style="font-size: 0.72rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.5rem;">Analysis Methods</p>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">FEA (static, dynamic, fatigue), CFD, Topology optimization, GD&T, DOE, DFMEA</p>
+            </div>
+            <div style="padding: 1rem; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              <p style="font-size: 0.72rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.5rem;">Coding</p>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Python (NumPy, SciPy, Matplotlib), MATLAB, Simulink, basic R</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="nav-logo">ME<span class="accent">.</span></span>
+      <p>© 2026 — Mechanical Engineering Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
